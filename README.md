@@ -1,4 +1,4 @@
-# IRTails-VMs
+# IRTails-Arsenal
 Automate your way into the IR world!!! 
 
 This project contains an Incident Response Playbook that automates the installation of forensics tools on different operating systems. It uses Ansible to manage the deployment and configuration of the tools.

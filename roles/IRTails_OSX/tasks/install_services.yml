@@ -1,0 +1,14 @@
+- name: Install Docker on macOS
+  homebrew:
+    name: docker
+    state: present
+
+- name: Install Docker Compose on macOS
+  homebrew:
+    name: docker-compose
+    state: present
+
+- name: Start Docker service
+  homebrew:
+    name: docker
+    state: started

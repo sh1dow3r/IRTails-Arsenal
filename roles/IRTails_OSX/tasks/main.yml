@@ -1,0 +1,10 @@
+---
+- name: Include services installation task
+  include_tasks: install_services.yml
+  
+- name: Install forensics tools
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ macos_forensics_tools }}"
+  

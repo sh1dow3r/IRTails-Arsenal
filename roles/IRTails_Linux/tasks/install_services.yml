@@ -1,0 +1,19 @@
+---
+- name: Install Docker on Linux
+  become: true
+  apt:
+    name: docker.io
+    state: present
+
+- name: Install Docker Compose on Linux
+  become: true
+  apt:
+    name: docker-compose
+    state: present
+
+- name: Add user to docker group
+  become: true
+  user:
+    name: "{{ ansible_user }}"
+    append: yes
+    groups: docker

@@ -1,0 +1,12 @@
+---
+- name: Install Chocolatey
+  win_chocolatey:
+    name: chocolatey
+    state: present
+
+- name: Install forensics tools
+  win_chocolatey:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ windows_forensics_tools }}"
+

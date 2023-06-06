@@ -1,0 +1,20 @@
+---
+- name: Incident Response Playbook
+  hosts: all
+  gather_facts: true
+  
+  roles:
+    - role: IRTails_Windows
+      when:
+        - "'windows' in group_names"
+        - ansible_os_family == "Windows"
+        
+    - role: IRTails_Linux
+      when:
+        - "'linux' in group_names"
+        - ansible_os_family == "Linux"
+        
+    - role: IRTails_OSX
+      when:
+        - "'macos' in group_names"
+        - ansible_system == "Darwin"

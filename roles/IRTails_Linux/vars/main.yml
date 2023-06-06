@@ -1,0 +1,5 @@
+---
+linux_forensics_tools:
+  - python3
+  - sleuthkit
+  - yara
